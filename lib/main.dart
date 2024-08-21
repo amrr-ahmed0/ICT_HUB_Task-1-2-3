@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey),
         useMaterial3: true,
         appBarTheme: const AppBarTheme(
+          scrolledUnderElevation: 0.0,
           centerTitle: true,
           titleTextStyle: TextStyle(
             fontSize: 35,
