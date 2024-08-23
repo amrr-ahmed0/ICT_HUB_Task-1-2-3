@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "667692378171",
+    "project_id": "accounting-program-c5ffc",
+    "storage_bucket": "accounting-program-c5ffc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667692378171:android:59ed3de51d54de00e5141e",
+        "android_client_info": {
+          "package_name": "com.example.ict_hub_task_1_2_3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667692378171-f8p4dv2mqbjcs8glhliossu1rrkepeat.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDi4lMYv8DMyuICt29te9xmq2JoWsIDL-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667692378171-f8p4dv2mqbjcs8glhliossu1rrkepeat.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
