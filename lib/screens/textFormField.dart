@@ -11,7 +11,6 @@ class TextFieldTest extends StatefulWidget {
 }
 
 class _TextFieldTestState extends State<TextFieldTest> {
-
   TextEditingController controller = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   int? result;
@@ -22,13 +21,6 @@ class _TextFieldTestState extends State<TextFieldTest> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      appBar: AppBar(
-        title: Text(
-          'Calculator'
-        ),
-      ),
-
       body: Center(
         child: SafeArea(
           child: Padding(
@@ -38,13 +30,12 @@ class _TextFieldTestState extends State<TextFieldTest> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-
                   CustomTextField(
-                    data: "Data",
+                    data: "Number 1",
                     hint: "Enter First Number",
                     controller: controller1,
-                    validator: (value){
-                      if(value!.isEmpty){
+                    validator: (value) {
+                      if (value!.isEmpty) {
                         setState(() {
                           result = null;
                         });
@@ -53,15 +44,15 @@ class _TextFieldTestState extends State<TextFieldTest> {
                       return null;
                     },
                   ),
-
-                  SizedBox(height: 20,),
-
+                  SizedBox(
+                    height: 20,
+                  ),
                   CustomTextField(
-                    data: "Data",
+                    data: "Number 2",
                     hint: "Enter Second Number",
                     controller: controller2,
-                    validator: (value){
-                      if(value!.isEmpty){
+                    validator: (value) {
+                      if (value!.isEmpty) {
                         setState(() {
                           result = null;
                         });
@@ -70,20 +61,17 @@ class _TextFieldTestState extends State<TextFieldTest> {
                       return null;
                     },
                   ),
-
                   Text(
-                    '${result?? ''}',
+                    '${result ?? ''}',
                     style: const TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold
-                    ),
+                        fontSize: 30, fontWeight: FontWeight.bold),
                   ),
-
-                  SizedBox(height: 10,),
-
+                  SizedBox(
+                    height: 10,
+                  ),
                   ElevatedButton(
                     onPressed: () {
-                      if(_formKey.currentState!.validate()){
+                      if (_formKey.currentState!.validate()) {
                         setState(() {
                           int n1 = int.parse(controller1.text);
                           int n2 = int.parse(controller2.text);
@@ -92,19 +80,19 @@ class _TextFieldTestState extends State<TextFieldTest> {
                       }
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.grey,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))
+                        backgroundColor: Colors.grey,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15))),
+                    child: CustomText(
+                      data: "Calculate",
                     ),
-                    child: CustomText(data: "Calculate",),
                   ),
-
                 ],
               ),
             ),
           ),
         ),
       ),
-
     );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../data model/items_model.dart';
+import '../data/data model/items_model.dart';
 import 'custom_text.dart';
 
 class CustomCard extends StatelessWidget {
@@ -20,10 +20,11 @@ class CustomCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          SizedBox(height:118, child: Image.asset('${items?.image}')),
-
-          Divider(color: Colors.black,thickness: 5,),
-
+          SizedBox(height: 118, child: Image.asset('${items?.image}')),
+          Divider(
+            color: Colors.black,
+            thickness: 5,
+          ),
           Padding(
             padding: EdgeInsets.all(10),
             child: Row(

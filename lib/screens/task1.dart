@@ -8,45 +8,35 @@ class Task1 extends StatefulWidget {
 }
 
 class _Task1State extends State<Task1> {
-
   static int counter = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      appBar: AppBar(
-        title: Text(
-          "Counter"
-        ),
-      ),
-
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             FloatingActionButton(
-                onPressed: (){
-                  setState(() {
-                    counter--;
-                  });
-                },
+              onPressed: () {
+                setState(() {
+                  counter--;
+                });
+              },
               child: const Icon(
                 Icons.remove,
                 size: 40,
               ),
               backgroundColor: Colors.grey,
             ),
-
             Text(
               "$counter",
               style: TextStyle(
                 fontSize: 40,
               ),
             ),
-
             FloatingActionButton(
-              onPressed: (){
+              onPressed: () {
                 setState(() {
                   counter++;
                 });
@@ -57,11 +47,9 @@ class _Task1State extends State<Task1> {
               ),
               backgroundColor: Colors.grey,
             ),
-
           ],
         ),
       ),
-
     );
   }
 }
