@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../data/data source/data_source.dart';
+import '../../data/data source/data_source.dart';
 import '../widgets/custom_card.dart';
 
 class GridViewTest extends StatefulWidget {

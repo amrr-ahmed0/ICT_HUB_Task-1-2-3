@@ -1,12 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:ict_hub_task_1_2_3/data/data%20model/user_model.dart';
 import 'package:ict_hub_task_1_2_3/data/data%20source/profile_data_source.dart';
-import 'package:ict_hub_task_1_2_3/screens/LoginScreen.dart';
-import 'package:ict_hub_task_1_2_3/widgets/custom_text.dart';
-
-import '../screens/homeNav.dart';
+import '../ui/screens/LoginScreen.dart';
+import '../ui/screens/homeNav.dart';
+import '../ui/widgets/custom_text.dart';
 
 class AppAuth {
   static Future register(

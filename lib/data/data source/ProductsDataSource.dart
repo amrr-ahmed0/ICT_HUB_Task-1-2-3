@@ -4,12 +4,7 @@ import 'package:ict_hub_task_1_2_3/data/data%20model/ProductDataModel.dart';
 import 'package:http/http.dart' as http;
 
 class ProductsDataSource {
-  static bool isLoading = true;
-  static bool isError = false;
-  static String errorMessage = '';
-  static List<ProductDataModel> products = [];
-
-  static Future<bool> getProducts() async {
+  Future<List<ProductDataModel>?> getProducts() async {
     print("getProducts called");
     try {
       QuerySnapshot<Map<String, dynamic>> collection =
@@ -19,20 +14,17 @@ class ProductsDataSource {
         return e.data();
       }).toList();
 
+      final List<ProductDataModel> products = [];
       for (Map<String, dynamic> item in productsList) {
         ProductDataModel product = ProductDataModel.fromJson(item);
         products.add(product);
       }
 
-      isLoading = false;
-      return true;
+      return products;
     } catch (e) {
-      isLoading = false;
-      isError = true;
-      errorMessage = e.toString();
       print(e);
 
-      return false;
+      return null;
     }
   }
 

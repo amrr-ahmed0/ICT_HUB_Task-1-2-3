@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../data/data model/items_model.dart';
+import '../../data/data model/items_model.dart';
 import 'custom_text.dart';
 
 class CustomCard extends StatelessWidget {

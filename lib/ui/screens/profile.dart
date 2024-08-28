@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:ict_hub_task_1_2_3/auth/app_auth.dart';
 import 'package:ict_hub_task_1_2_3/data/data%20model/user_model.dart';
 import 'package:ict_hub_task_1_2_3/data/data%20source/profile_data_source.dart';
-import 'package:ict_hub_task_1_2_3/widgets/custom_text.dart';
+
+import '../widgets/custom_text.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});

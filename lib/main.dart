@@ -1,13 +1,14 @@
 import 'dart:convert';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ict_hub_task_1_2_3/core/bloc_observer.dart';
 import 'package:ict_hub_task_1_2_3/firebase_options.dart';
-import 'package:ict_hub_task_1_2_3/screens/LoginScreen.dart';
-import 'package:ict_hub_task_1_2_3/screens/homeNav.dart';
 import 'package:http/http.dart' as http;
+import 'package:ict_hub_task_1_2_3/ui/screens/LoginScreen.dart';
+import 'package:ict_hub_task_1_2_3/ui/screens/homeNav.dart';
 
 Future<bool> getProductsData() async {
   var response = await http.get(Uri.parse('https://dummyjson.com/products'));
@@ -39,6 +40,7 @@ Future<void> saveItemToProductsCollection(Map<String, dynamic> item) async {
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
 }
 

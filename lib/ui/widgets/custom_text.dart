@@ -12,6 +12,7 @@ class CustomText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       data,
+      textAlign: TextAlign.center,
       style: TextStyle(
         fontSize: fontSize ?? 18,
         fontWeight: FontWeight.bold,

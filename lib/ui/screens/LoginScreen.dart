@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ict_hub_task_1_2_3/auth/app_auth.dart';
-import 'package:ict_hub_task_1_2_3/screens/RegisterScreen.dart';
-import 'package:ict_hub_task_1_2_3/screens/homeNav.dart';
-import 'package:ict_hub_task_1_2_3/validator/validator.dart';
-import 'package:ict_hub_task_1_2_3/widgets/custom_elevatedButton.dart';
-import 'package:ict_hub_task_1_2_3/widgets/custom_textFormField.dart';
-
+import '../../validator/validator.dart';
+import '../widgets/custom_elevatedButton.dart';
 import '../widgets/custom_text.dart';
+import '../widgets/custom_textFormField.dart';
+import 'RegisterScreen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});

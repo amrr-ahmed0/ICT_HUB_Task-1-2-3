@@ -1,12 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:ict_hub_task_1_2_3/auth/app_auth.dart';
-import 'package:ict_hub_task_1_2_3/screens/LoginScreen.dart';
-import 'package:ict_hub_task_1_2_3/widgets/custom_text.dart';
-
-import '../validator/validator.dart';
+import '../../validator/validator.dart';
 import '../widgets/custom_elevatedButton.dart';
+import '../widgets/custom_text.dart';
 import '../widgets/custom_textFormField.dart';
+import 'LoginScreen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
